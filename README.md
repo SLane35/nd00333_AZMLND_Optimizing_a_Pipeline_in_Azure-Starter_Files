@@ -28,4 +28,4 @@ The AutoML model used a VotingEnsemble algorithm, and the Hyperdrive model used 
 Although the models achieved similar results, they went about getting the results in very different ways.
 
 ## Future work
-If I had the opportunity to experiment more with this, I would try using different parameters for the Logistic Regression in the Hyperdrive run and also perhaps use the Bayesian sampler. I would also like to experiemnt with different primary metrics. 
+If I had the opportunity to experiment more with this, I would try using the Bayesian sampler instead of Random since it is more thorough and could achieve better results. I would also like to experiment with different primary metrics, like AUC. Since the data in this dataset is imbalanced, the accuracy does not really give a good measure of performance.
