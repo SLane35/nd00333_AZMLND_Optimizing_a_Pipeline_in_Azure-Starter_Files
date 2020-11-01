@@ -29,3 +29,6 @@ Although the models achieved similar results, they went about getting the result
 
 ## Future work
 If I had the opportunity to experiment more with this, I would try using the Bayesian sampler instead of Random since it is more thorough and could achieve better results. I would also like to experiment with different primary metrics, like AUC. Since the data in this dataset is imbalanced, the accuracy does not really give a good measure of performance.
+
+## Delete compute
+https://github.com/SLane35/nd00333_AZMLND_Optimizing_a_Pipeline_in_Azure-Starter_Files/blob/master/delete_compute.pdf
