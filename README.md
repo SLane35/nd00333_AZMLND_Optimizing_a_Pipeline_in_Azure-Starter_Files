@@ -8,7 +8,7 @@ This model is then compared to an Azure AutoML run.
 ## Summary
 This dataset contains data about bank customers and seeks to predict if a customer with subscribe to a fixed term deposit. The data is an Azure sample dataset and can be downloaded from https://automlsamplenotebookdata.blob.core.windows.net/automl-sample-notebook-data/bankmarketing_train.csv.
 
-The best-performing model used the VotingEnsemble algorithm and achieved an accuracy of 91.77%. The AutoML run outperformed the Azure ML pipeline using Hyperdrive.
+The best-performing model used the VotingEnsemble algorithm and achieved an accuracy of 91.67%. The AutoML run outperformed the Azure ML pipeline using Hyperdrive.
 
 ## Scikit-learn Pipeline
 **Explain the pipeline architecture, including data, hyperparameter tuning, and classification algorithm.**
@@ -19,7 +19,7 @@ First, the data was cleaned. This included dropping certain columns and creating
 The VotingEnsemble achieved the highest accuracy with 91.77%. The AutoML parameters that I set were task, primary_metric, experiment_timeout_minutes, training_data, label_column_name, and n_cross_validations. Task can be classification, regression or forecasting. In our case, we are trying to predict whether a customer will subscribe to a fixed term deposit, which is a classification problem (yes or no). I set the primary metric to accuracy to match the primary metric used in the Hyperdrive run, and the experiment timeout was set to 30 minutes. I used 5 for the cross validations since that is a standard number to use.
 
 ## Pipeline comparison
-The accuracies of the models were very similar - the AutoML model achieved an accuracy of 91.77% and the Hyperdrive model achieved an accuracy of 91.34%. However, the AutoML run was much easier to set up since all I had to do was set the training data, the type of task, the primary metric, and the number of cross validations. For the Hyperdrive run, I needed to decide which parameters to use, which options there should be for each parameter, and how each parameter should be sampled. I also needed to set the estimator to train the model. 
+The accuracies of the models were very similar - the AutoML model achieved an accuracy of 91.67% and the Hyperdrive model achieved an accuracy of 91.24%. However, the AutoML run was much easier to set up since all I had to do was set the training data, the type of task, the primary metric, and the number of cross validations. For the Hyperdrive run, I needed to decide which parameters to use, which options there should be for each parameter, and how each parameter should be sampled. I also needed to set the estimator to train the model. 
 
 On the other hand, the Hyperdrive run lasted for about 9 minutes, and the AutoML run lasted a little more than a half hour. In this case it didn't make a big difference but it's possible that on a larger scale the difference would be more significant. This also had to do with that the AutoML model uses more complex algorithms than the Logistic Regression algorithm that was used with the Hyperdrive run.
 
