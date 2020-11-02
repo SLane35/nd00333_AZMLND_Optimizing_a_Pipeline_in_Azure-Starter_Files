@@ -3,7 +3,7 @@
 ## Overview
 This project is part of the Udacity Azure ML Nanodegree.
 In this project, we build and optimize an Azure ML pipeline using the Python SDK and a provided Scikit-learn model.
-This model is then compared to an Azure AutoML run.
+This model is then compared to an Azure AutoML run. See diagram:![Diagram](https://github.com/SLane35/nd00333_AZMLND_Optimizing_a_Pipeline_in_Azure-Starter_Files/blob/master/Architecture.png) 
 
 ## Summary
 This dataset contains data about bank customers and seeks to predict if a customer with subscribe to a fixed term deposit. The data is an Azure sample dataset and can be downloaded from https://automlsamplenotebookdata.blob.core.windows.net/automl-sample-notebook-data/bankmarketing_train.csv.
