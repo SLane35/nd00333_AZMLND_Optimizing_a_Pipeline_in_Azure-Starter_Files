@@ -17,6 +17,9 @@ First, the data was cleaned. This included dropping certain columns and creating
 ## AutoML
 The VotingEnsemble achieved the highest accuracy with 91.77%. The AutoML parameters that I set were task, primary_metric, experiment_timeout_minutes, training_data, label_column_name, and n_cross_validations. Task can be classification, regression or forecasting. In our case, we are trying to predict whether a customer will subscribe to a fixed term deposit, which is a classification problem (yes or no). I set the primary metric to accuracy to match the primary metric used in the Hyperdrive run, and the experiment timeout was set to 30 minutes. I used 5 for the cross validations since that is a standard number to use.
 
+AutoML produced the parameters that were used to achieve the highest accuracy score. It used the XGBoostClassifier with the following hyperparameters: base_score=0.5, booster='gbtree', colsample_bylevel=1, cosample_bynode=1, colsample_bytree=1, gamma=0, learning_rate=0.1, max_delta_step=0, max_depth=3, min_child_weight=1, objective='reg:logistic', random_state=0, reg_alpha=0, reg_lambda=1.0416666666666667, scale_pos_weight=1, seed=None, silent=None, subsample=0.9, tree_method='auto', verbos=-10, verbosity=0. The weights used were: 
+
+
 ## Pipeline comparison
 The accuracies of the models were very similar - the AutoML model achieved an accuracy of 91.67% and the Hyperdrive model achieved an accuracy of 91.24%. However, the AutoML run was much easier to set up since all I had to do was set the training data, the type of task, the primary metric, and the number of cross validations. For the Hyperdrive run, I needed to decide which parameters to use, which options there should be for each parameter, and how each parameter should be sampled. I also needed to set the estimator to train the model. 
 
